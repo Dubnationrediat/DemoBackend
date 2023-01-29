@@ -9,15 +9,24 @@ app.use(express.urlencoded({
 
 app.use(cors());
 app.use(express.json());
-
+// MYSQLHOST
+// MYSQLPORT
+// MYSQLUSER
+// MYSQLPASSWORD
+// MYSQLDATABASE
+// MYSQL_URL
 let connectionInfo = mysql.createConnection({
-    database:"demoDB",
-    user:"root ",
-    password:"3dmUsmqpgwjeIzav6LxL",
-    host :"containers-us-west-194.railway.app",
-    port :7987
+    database:process.env.MYSQLDATABASE,
+    user:process.env.MYSQLUSER,
+    password:process.env.MYSQLPASSWORD,
+    host :process.env.MYSQLHOST,
+    port :process.env.MYSQLPORT,
 })
-
+// database:"demoDB",
+// user:"root ",
+// password:"3dmUsmqpgwjeIzav6LxL",
+// host :"containers-us-west-194.railway.app",
+// port :7987
 // * create table
 app.get('/create',(req,res)=>{
 //     connectionInfo.query(database,(err,row,field)=>{
