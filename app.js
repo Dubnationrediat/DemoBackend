@@ -1,5 +1,5 @@
 import express from 'express'
-import mysql from 'mysql'
+import mysql from 'mysql2'
 import database from './schema/db.js'
 import cors from 'cors'
 let app = express();
