@@ -20,13 +20,14 @@ let connectionInfo = mysql.createConnection({
 
 // * create table
 app.get('/create',(req,res)=>{
-    connectionInfo.query(database,(err,row,field)=>{
-   if(err){
-    console.log(err)
-   }else{
-        res.send('table created')
-   }
-})
+//     connectionInfo.query(database,(err,row,field)=>{
+//    if(err){
+//     console.log(err)
+//    }else{
+//         res.send('table created')
+//    }
+// })
+res.send('table created')
 });
 //  * insert data
 app.post('/insert',(req,res)=>{
