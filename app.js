@@ -12,9 +12,10 @@ app.use(express.json());
 
 let connectionInfo = mysql.createConnection({
     database:"demoDB",
-    user:"demoDB_user",
-    password:"demo_password",
-    host :"localhost"
+    user:"root ",
+    password:"3dmUsmqpgwjeIzav6LxL",
+    host :"containers-us-west-194.railway.app",
+    port :7987
 })
 
 // * create table
@@ -55,9 +56,10 @@ app.delete('/delete',(req,res)=>{
     res.send('this is delete page')
 });
 
+const PORT = process.env.PORT || 3456
 
 let server = ()=>{
-    app.listen(3456,(req,res)=>{
+    app.listen(PORT,(req,res)=>{
         console.log(`server is listening to 3456`);
     });
 }
