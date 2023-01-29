@@ -14,7 +14,7 @@ let connectionInfo = mysql.createConnection({
     database:"demoDB",
     user:"-uroot ",
     password:"-p3dmUsmqpgwjeIzav6LxL",
-    host :"-hcontainers-us-west-194.railway.app",
+    host :"containers-us-west-194.railway.app",
     port :7987
 })
 
