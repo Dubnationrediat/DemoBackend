@@ -12,7 +12,7 @@ app.use(express.json());
 
 let connectionInfo = mysql.createConnection({
     database:"demoDB",
-    user:"-uroot ",
+    user:"root ",
     password:"-p3dmUsmqpgwjeIzav6LxL",
     host :"containers-us-west-194.railway.app",
     port :7987
